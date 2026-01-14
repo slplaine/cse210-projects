@@ -52,11 +52,11 @@ class Program
         }
         if (grade >= 93) 
         { 
-            signal = " "; 
+            sign = " "; 
         } 
         if (grade < 60) 
         { 
-            signal = " "; 
+            sign = " "; 
         }
         Console.WriteLine($"{letter}{sign}");            
         if (grade >= 70)
