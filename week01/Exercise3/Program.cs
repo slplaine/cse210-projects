@@ -34,20 +34,22 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine("You guessed it!");  
-                }
-                Console.WriteLine($"You got it in {guessCount} guesses!");
-                Console.Write("Would you like to play again (yes/no)? ");
-                keepPlaying = Console.ReadLine().Trim().ToLower();
-                if (keepPlaying == "no")
+                    Console.WriteLine("You guessed it!");
+                    Console.WriteLine($"You got it in {guessCount} guesses!");
+                    Console.Write("Would you like to play again (yes/no)? ");
+                    keepPlaying = Console.ReadLine().Trim().ToLower();
+                    if (keepPlaying == "no")
                 {
                     Console.WriteLine("Thank you for playing. Goodbye.");
                 }
                 else if (keepPlaying != "yes")
                 {
                     Console.WriteLine("Unrecognized answer. Exiting the game.");
-                    break;
+                    keepPlaying = "no";
                 }
+                break;
+                }
+                
             }
         }
     }
