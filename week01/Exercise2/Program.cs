@@ -10,7 +10,7 @@ class Program
         double grade;
         bool ok = double.TryParse(input, out grade);
         if (!ok)
-            {arabéns, você passou na disciplina!
+            {
             Console.WriteLine("Invalid entry. Please enter a number.");
             return;
             }
