@@ -10,6 +10,7 @@ class Program
         while (keepPlaying == "yes")
         {
             int secretNumber = random.Next(1, 101);
+            // This line reveals the secret number to simplify testing.
             Console.WriteLine($"What is the magic number? {secretNumber}");
             int guessCount = 0;
             int guess = -1;
