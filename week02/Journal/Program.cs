@@ -1,7 +1,8 @@
 // Improvement: The program now saves and loads journal entries in CSV format,
-// improving the process so the file can be opened directly in Excel.
-
-using System;
+// improving the process so the file can be opened directly in Excel
+using System; 
+using System.Collections.Generic; 
+using System.IO;
 
 class Program
 {
@@ -19,7 +20,7 @@ class Program
             Console.WriteLine("3. Load (.txt)");
             Console.WriteLine("4. Save (.txt)");
             Console.WriteLine("5.Load (.csv)");
-            Cooonsole.WriteLine("6.Save (.csv)");
+            Console.WriteLine("6.Save (.csv)");
             Console.WriteLine("7. Quit");
             Console.Write("What would you like to do? ");
             choice = Console.ReadLine();
@@ -58,7 +59,7 @@ class Program
             }
             else if (choice == "5")
             {
-                CConsole.Write("What is the filename? "); 
+                Console.Write("What is the filename? "); 
                 string filename = Console.ReadLine(); 
                 journal.LoadFromCsv(filename);
             }

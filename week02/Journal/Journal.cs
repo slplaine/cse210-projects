@@ -34,6 +34,7 @@ public class Journal
                 outputFile.WriteLine($"{date},{prompt},{text}");
             }
         }
+
     }
 
     private string EscapeCsv(string field)
@@ -95,6 +96,33 @@ public class Journal
         fields.Add(current);
 
         return fields.ToArray();
+    }
+    public void SaveToFile(string filename)
+    {
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+        foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+            }
+        }
+    }
+
+    public void LoadFromFile(string filename)
+    {
+        _entries.Clear();
+        string[] lines = File.ReadAllLines(filename);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split('|');
+            Entry entry = new Entry
+            {
+                _date = parts[0],
+                _promptText = parts[1],
+                _entryText = parts[2]
+            };
+            _entries.Add(entry);
+        }
     }
 
 }
