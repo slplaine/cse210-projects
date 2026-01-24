@@ -12,7 +12,7 @@ class Program
         PromptGenerator promptGenerator = new PromptGenerator();
 
         string choice = "";
-        while (choice != "5")
+        while (choice != "7")
         {
             Console.WriteLine("Please select one of the following choices:");
             Console.WriteLine("1. Write");
