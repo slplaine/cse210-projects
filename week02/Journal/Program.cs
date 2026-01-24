@@ -19,8 +19,8 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load (.txt)");
             Console.WriteLine("4. Save (.txt)");
-            Console.WriteLine("5.Load (.csv)");
-            Console.WriteLine("6.Save (.csv)");
+            Console.WriteLine("5. Load (.csv)");
+            Console.WriteLine("6. Save (.csv)");
             Console.WriteLine("7. Quit");
             Console.Write("What would you like to do? ");
             choice = Console.ReadLine();
