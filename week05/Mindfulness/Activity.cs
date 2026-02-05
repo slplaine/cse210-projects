@@ -3,7 +3,7 @@ using System.Threading;
 
 public class Activity
 {
-    // 1️⃣ Atributos privados (mais seguro)
+    
     private string _name;
     private string _description;
     private int _duration;
@@ -14,7 +14,7 @@ public class Activity
         _description = description;
     }
 
-    // 2️⃣ Métodos públicos que expõem comportamento, não dados
+    
     public void DisplayStartingMessage()
     {
         Console.Clear();
@@ -35,13 +35,13 @@ public class Activity
         ShowSpinner(3);
     }
 
-    // 3️⃣ Getter controlado (necessário para as classes filhas)
+    
     public int GetDuration()
     {
         return _duration;
     }
 
-    // 4️⃣ Métodos auxiliares privados (não precisam ser herdados)
+    
     private void ShowSpinner(int seconds)
     {
         string[] spinner = { "|", "/", "-", "\\" };
@@ -65,7 +65,7 @@ public class Activity
         }
     }
 
-    // 5️⃣ Comportamentos reutilizáveis para as filhas
+   
     public void PauseWithSpinner(int seconds)
     {
         ShowSpinner(seconds);
