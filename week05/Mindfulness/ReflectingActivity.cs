@@ -39,12 +39,12 @@ public class ReflectingActivity : Activity
 
         int elapsedTime = 0;
 
-        // 🔹 Cópia da lista de perguntas
+        
         List<string> remainingQuestions = new List<string>(_questions);
 
         while (elapsedTime < GetDuration())
         {
-            // Se acabar, recria a lista
+            
             if (remainingQuestions.Count == 0)
             {
                 remainingQuestions = new List<string>(_questions);
@@ -58,7 +58,7 @@ public class ReflectingActivity : Activity
 
             elapsedTime += 5;
 
-            // 🔹 Remove a pergunta já usada
+            
             remainingQuestions.RemoveAt(index);
         }
 
